@@ -4,9 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <h2>Total number of users: <%= users %></h2>
-    <button>Join Us Today!</button>
+    <h1>Hi, Welcome!</h1>
+    <h2>Become a part of our vibrant community of
+      <b style="color: red"><%= users %></b> users</h2>
+    <form action="http://localhost:<%=port%>/user">
+         <button>Join Today</button>
+    </form>
 </body>
 </html>

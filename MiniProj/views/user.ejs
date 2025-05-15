@@ -6,6 +6,11 @@
     <title>Users Info</title>
 </head>
 <body>
+
+    <form method="GET" action="/user/new">
+      <button>Add New User</button>
+    </form>
+
     <h3>Users Info:</h3>
     <table border="3px solid black">
         <tr>
@@ -22,6 +27,11 @@
                 <td>
                     <form method="GET" action="/user/<%= result[i]["id"] %> /edit">
                         <button>Edit Username</button>
+                    </form>
+                </td>
+                <td>
+                    <form method="get" action="/user/<%=result[i]["id"]%>/delete">
+                        <button>Delete</button>
                     </form>
                 </td>
             </tr>
