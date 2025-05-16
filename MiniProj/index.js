@@ -101,6 +101,7 @@ app.patch("/user/:id" ,(req,res)=>{
     }
 });
 
+// Add NEW USER
 app.get("/user/new", (req, res) => {
   res.render("new.ejs");
 });
@@ -121,6 +122,7 @@ app.post("/user/new", (req, res) => {
   }
 });
 
+// DELETE USER
 app.get("/user/:id/delete", (req, res) => {
   let { id } = req.params;
   let q = `SELECT * FROM user WHERE id='${id}'`;
