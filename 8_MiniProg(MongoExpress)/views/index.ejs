@@ -7,20 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h3>All Chats- </h3>
+    <h3>All Chats- </h3> 
 
     <% for(let chat of chats){ %>
             <div class="chat">
                 <p>From: <i><%= chat.from%></i> </p>
                 <div class="msg">
                     <p><%= chat.message%> </p>
+                    <form method="GET" action="/chats/<%= chat._id %>/edit">
+                        <button style="border-radius: 20px; padding: 8px 16px; border: none; cursor: pointer;">Edit</button>
+                    </form>
                 </div>
                 <p>Recieved by: <i><%= chat.to%></i> </p>
-                <p>date: <%= chat.created_at%> </p>
+                <p>Created at: <%= chat.created_at.toString().split(" ")[4] %> </p>
+                <p><%= chat.created_at.toString().split(" ").slice(0,4).join(" ") %></p>
                 <hr>
             </div>
             <br>
             <br>
     <% } %>
+
+    <form method="GET" action="/chats/new">
+        <Button>Add a new chat</Button>
+    </form>
 </body>
 </html>

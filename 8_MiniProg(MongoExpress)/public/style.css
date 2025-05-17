@@ -1,7 +1,11 @@
 body{
     margin-left: 20px;
+    background-color: black;
 }
 
+h3{
+    color: white;
+}
 .chat{
     background-color: aliceblue;
     padding: 20px;
